@@ -1,0 +1,117 @@
+html {
+	position: relative;
+    height: 100%;
+}
+body {
+	background:@body_bg;
+	color:@base_font;
+	font-family: 'PT Sans', sans-serif;
+	font-weight:400;
+	font-size:1em;
+	line-height: 21px;
+	position: relative;
+    height: 100%;
+	}
+::-moz-selection{
+	background:@select_bg;
+	color:@select_font;
+}
+::selection{
+	background:@select_bg;
+	color:@select_font;
+}
+body.u-load{
+	height:100%;
+	width:100%;
+	overflow:hidden;
+}
+body.modal-open{
+	overflow: hidden;
+}
+#u-load-page{
+	position: fixed;
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background:@body_load;
+}
+#u-load-page .u-load-anim{
+	display:block;
+	width:100px;
+	height:100px;
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -50px;
+	margin-left: -50px;
+}
+#u-load-anim{
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 99;
+}
+#u-load-shape{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 199;
+	.animation (uload, 1.5s, infinite, linear);
+}
+@keyframes uload {
+	0% { -webkit-transform: rotate(0deg); }
+	60% { -webkit-transform: rotate(360deg); }
+	70% { -webkit-transform: rotate(390deg); }
+	90% { -webkit-transform: rotate(360deg); }
+	100% { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes uload {
+	0% { -webkit-transform: rotate(0deg); }
+	60% { -webkit-transform: rotate(360deg); }
+	70% { -webkit-transform: rotate(390deg); }
+	90% { -webkit-transform: rotate(360deg); }
+	100% { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes uload {
+	0% { -moz-transform: rotate(0deg); }
+	60% { -moz-transform: rotate(360deg); }
+	70% { -moz-transform: rotate(390deg); }
+	90% { -moz-transform: rotate(360deg); }
+	100% { -moz-transform: rotate(360deg); }
+}
+@-o-keyframes uload {
+	0% { -o-transform: rotate(0deg); }
+	60% { -o-transform: rotate(360deg); }
+	70% { -o-transform: rotate(390deg); }
+	90% { -o-transform: rotate(360deg); }
+	100% { -o-transform: rotate(360deg); }
+}
+
+#u-body {height: calc(100% - 61px - 124px);} //100% - header - content padding
+
+.u-wrap{
+	width: 1170px;
+	margin:0 auto;
+	position: relative;
+	z-index: 1;
+    height: 100%;
+}
+.u-clear:before,
+.u-clear:after {
+    content: " ";
+    display: table;
+}
+.u-clear:after {
+    clear: both;
+}
+.u-clear {
+    *zoom: 1;
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}

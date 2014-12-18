@@ -1,0 +1,923 @@
+.add-button {
+  background: @head_bg;
+  padding: 20px 40px 20px 80px;
+  border-radius: 10px;
+  margin: 0 50px 13px 50px;
+  display: block;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  color: @content_bg;
+  text-align: left;
+}
+
+.add-button h3 {
+  font-size: 1.2em;
+}
+
+.add-button p {
+  margin: 0;
+  color: @info_font;
+  font-size: 0.9em;
+  line-height: 1.2em;
+}
+
+.add-button.url {
+  background: @head_bg url("../img/icons/add_url.png") no-repeat 27px center;
+}
+
+.add-button.url:hover {
+  background: #36383d url("../img/icons/add_url.png") no-repeat 27px center;
+}
+
+.add-button.html {
+  background: @head_bg url("../img/icons/add_html.png") no-repeat 27px center;
+}
+
+.add-button.html:hover {
+  background: #36383d url("../img/icons/add_html.png") no-repeat 27px center;
+}
+
+.add-button.file {
+  background: @head_bg url("../img/icons/add_file.png") no-repeat 27px center;
+}
+
+.add-button.file:hover {
+  background: #36383d url("../img/icons/add_file.png") no-repeat 27px center;
+}
+
+.mf-restore-value, .mf-restore-filter {
+  display: block;
+}
+
+.clone, .clone-old, .clone-new, .inactive, .hidden {
+  display: none;
+}
+
+.fu-list > .clone-old, .fu-list > .clone-new {
+  display: none;
+}
+
+/* ПЕРЕНЕСЕНО В ОСНОВНЫЕ СТИЛИ
+.fu-container {
+  min-height: 200px;
+  overflow: auto;
+  border-radius: 15px;
+  border: none;
+  position: relative;
+  padding: 10px 10px 50px 10px;
+  box-sizing: border-box;
+  background: @head_bg;
+}
+
+.fu-add-hidden-input {
+  display: none;
+}
+
+.fu-add-button {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  border: dashed 2px #686A6E;
+  border-radius: 10px;
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  background: url("../img/fileupload-arrow.png") no-repeat center;
+  cursor: pointer;
+}
+
+.fu-add-button.full-width {
+  width: 290px;
+}
+
+img.fu-image {
+  display: inline-block;
+  max-width: 120px;
+  max-height: 100px;
+
+}
+
+div.fu-image {
+  display: inline-block;
+  width: 120px;
+  height: 100px;
+  background: url("../img/img-placeholder.svg") no-repeat center;
+  background-size: contain;
+}
+
+.fu-image.text {
+  display: inline-block;
+  width: 120px;
+  height: 100px;
+  background: url("../img/fileupload-text.png") no-repeat center;
+  background-size: contain;
+}
+
+.fu-delete {
+  background-image: url("../img/fileupload-delete.png");
+  padding: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.fu-image-container {
+  display: inline-block;
+}
+
+.fu-element {
+  display: none;
+}
+
+.fu-link-hidden-input {
+  display: none;
+}
+
+.fu-add-link {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 20px;
+  background: url(../img/fileupload-link.png) no-repeat center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.fu-add-link-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  margin: 10px;
+  display: none;
+}
+
+.ui-dialog .fu-add-link-container .fu-url-input {
+  width: 250px;
+  margin-left: 5px;
+  vertical-align: middle;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: none;
+  border: solid #c5c5c5 1px;
+
+}
+
+.fu-url-button {
+  vertical-align: middle;
+  display: inline-block;
+  color: transparent;
+  width: 20px;
+  height: 20px;
+  background: url(../img/fileupload-done.png) no-repeat center;
+  padding: 10px;
+}
+*/
+
+//dialog
+.ui-dialog {
+  background-color: #323438;
+  border-radius: 15px;
+  z-index: 9999;
+  color: white;
+  padding: 30px 0;
+  .u-content_h3.u-fieldset_label {
+    display: none;
+  }
+  .u-block {
+    padding: 0;
+    margin: 0;
+  }
+
+  .u-fieldset_label {
+    display: none;
+  }
+  .u-block {
+    padding: 0;
+    margin: 0;
+  }
+
+  input[type="text"] {
+    width: 314px;
+  }
+
+  .u-form textarea, .SumoSelect, input[type="text"] {
+    width: 350px;
+    box-sizing: border-box;
+  }
+
+  .u-block_line.u-half_col {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 170px;
+    // TODO fix me
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .slide_counter input[type=text].sett-slide-value {
+    width: 75px;
+  }
+}
+
+//header
+.ui-dialog-titlebar-close {
+  display: inline-block;
+  float: right;
+}
+
+.ui-dialog-title {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 21px;
+}
+
+.ui-dialog-titlebar {
+  padding: 0 50px 10px 50px;
+}
+
+//header
+//tabs
+.ui-tabs {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+  ul {
+
+    li {
+      padding: 0;
+      margin: 0 0 -2px 0;
+      display: inline-block;
+      outline: none;
+      &.ui-tabs-active {
+        a {
+          color: white;
+          border-bottom: solid @prior 2px;
+        }
+      }
+      a {
+        display: block;
+        color: #a4a6aa;
+        padding: 10px 0;
+        text-decoration: none;
+        margin-right: 20px;
+        outline: none;
+      }
+    }
+  }
+
+}
+
+.ui-tabs > ul {
+  padding-left: 50px;
+  border-bottom: solid 2px @content_h;
+}
+
+//tabs
+
+.ui-tabs ul li.ui-state-disabled:not(.ui-tabs-active) a {
+  color: #3c3e42;
+}
+
+//buttons
+.ui-dialog-buttonset {
+  padding: 30px 50px 0 50px;
+  .u-form-btn {
+    margin-right: 20px;
+  }
+}
+
+.dark-skin .u-form-btn.prior[disabled], .dark-skin .u-form-btn[disabled] {
+  color: #686a6e;
+  border: 2px solid #404246;
+  background: #404246;
+}
+
+.dark-skin .u-form textarea:focus {
+  background-color: white;
+}
+
+/* ПЕРЕНЕСЕНО В ОСНОВНЫЕ СТИЛИ
+.ui-dialog textarea {
+  max-width: 350px;
+  min-width: 350px;
+  max-height: 185px;
+  min-height: 185px;
+  height: 185px;
+}
+*/
+
+.ui-dialog-titlebar-close {
+  padding: 0;
+  color: transparent;
+  border-style: none;
+  margin: 0;
+  cursor: pointer;
+  background-color: transparent;
+  background-image: url('../img/fileupload-delete.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+//buttons
+
+//content
+.ui-tabs-panel {
+  padding: 10px 50px;
+}
+
+//content
+
+.SlectBox, .SlectBoxa {
+  padding: 5px;
+}
+
+/* ПЕРЕНЕСЕНО В ОСНОВНЫЕ СТИЛИ
+
+this is applied on that hidden select. DO NOT USE display:none; or visiblity:hidden; and Do not override any of these properties. 
+
+.SelectClass {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  z-index: 1;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+}
+
+.SumoSelect > .optWrapper > .options > li {
+  -moz-transition: 200ms ease;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+  width: 90%;
+}
+
+.SumoSelect > .optWrapper > .options > li label, .SumoSelect > .CaptionCont {
+  user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+}
+
+.SumoSelect {
+  display: inline-block;
+  position: relative;
+}
+
+.SumoSelect > .CaptionCont {
+  box-sizing: border-box;
+  display: block;
+  margin: 0;
+  max-width: 350px;
+  min-height: 20px;
+  position: relative;
+  padding: 0;
+  outline: 0;
+  z-index: 1;
+}
+
+.SumoSelect > .CaptionCont > span {
+  width: 350px;
+  box-sizing: border-box;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  background: rgba(44, 46, 50, 0.97) url(http://new-admin.ucoz.com/img/icons/icon_sel.svg) no-repeat right 18px top 15px;
+  padding: 7px 18px 8px 18px;
+  font-size: 1em;
+  line-height: 1;
+  color: #96999e;
+  border: 2px solid #54565a;
+  border-radius: 9px;
+  margin: 0;
+  font-family: 'PT Sans', sans-serif;
+  transition: border .3s linear;
+  -webkit-transition: border .3s linear;
+  -moz-transition: border .3s linear;
+  -o-transition: border .3s linear;
+  cursor: pointer;
+  position: relative;
+  text-overflow: clip;
+  z-index: 49;
+  outline: 0;
+}
+
+.SumoSelect > .CaptionCont > span.placeholder {
+  color: #ccc;
+  font-style: italic;
+}
+
+.SumoSelect > .CaptionCont > label {
+  display: none;
+}
+
+.SumoSelect > .optWrapper {
+  top: 30px;
+  width: 100%;
+  position: absolute;
+  overflow-x: hidden;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+  -webkit-transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+  -moz-transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+  -ms-transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+  -o-transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: -100;
+  background: rgba(44, 46, 50, .97);
+  border: 2px solid #54565a;
+  border-top: none;
+  box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.11);
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+}
+
+.SumoSelect > .optWrapper.open {
+  top: 28px;
+  visibility: visible;
+  opacity: 1;
+  z-index: 1000;
+}
+
+.SumoSelect > .optWrapper > .options {
+  list-style: none;
+  display: block;
+  padding: 0px;
+  margin: 0px;
+  overflow-x: hidden;
+  max-height: 250px; 
+}
+
+.SumoSelect > .optWrapper.isFloating > .options {
+  max-height: 100%;
+}
+
+.SumoSelect > .optWrapper > .options > li {
+  padding: 4px 6px;
+  border-bottom: 1px solid #404040;
+  position: relative;
+}
+
+.SumoSelect > .optWrapper > .options > li:first-child {
+  border-radius: 3px 3px 0px 0px;
+}
+
+.SumoSelect > .optWrapper > .options > li:last-child {
+  border-bottom: none;
+  border-radius: 0px 0px 3px 3px;
+}
+
+.SumoSelect > .optWrapper > .options > li:hover {
+  background-color: #d6d4de;
+}
+
+.SumoSelect > .optWrapper > .options > li:hover label {
+  color: #1a1a1a;
+}
+
+.SumoSelect > .optWrapper > .options > li label {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  font-family: 'PT Sans', sans-serif;
+  color: #cbced3;
+}
+
+.SumoSelect > .optWrapper > .options > li span {
+  display: none;
+}
+
+
+.SumoSelect > .optWrapper.isFloating {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  width: 90%;
+  bottom: 0px;
+  margin: auto;
+  max-height: 90%;
+}
+
+
+.SumoSelect:hover > .CaptionCont > label {
+  background-color: rgba(44, 46, 50, 0.972549);
+}
+
+
+.SumoSelect > .optWrapper > .options > li.disabled {
+  background-color: inherit;
+}
+
+.SumoSelect > .optWrapper > .options > li.disabled * {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; 
+  filter: alpha(opacity=50); 
+  -moz-opacity: 0.5; 
+  -khtml-opacity: 0.5; 
+  opacity: 0.5;
+}
+
+
+.SumoSelect > .optWrapper.multiple > .options > li {
+  padding-left: 35px;
+}
+
+.SumoSelect > .optWrapper.multiple > .options > li span {
+  position: absolute;
+  display: block;
+  width: 30px;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+}
+
+.SumoSelect > .optWrapper.multiple > .options > li span i {
+  background-image: url('http://graphics8.nytimes.com/packages/flash/business/20100325-FinancialTuneUp/gfx/checkbox.png');
+  position: absolute;
+  margin: auto;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 16px;
+  height: 16px;
+}
+
+.SumoSelect > .optWrapper > .MultiControls {
+  display: none;
+  border-top: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.13);
+  border-radius: 0px 0px 3px 3px;
+}
+
+.SumoSelect > .optWrapper.multiple.isFloating > .MultiControls {
+  display: block;
+  margin-top: 5px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.SumoSelect > .optWrapper.multiple.okCancelInMulti > .MultiControls {
+  display: block;
+}
+
+.SumoSelect > .optWrapper.multiple.okCancelInMulti > .MultiControls > p {
+  padding: 6px;
+}
+
+.SumoSelect > .optWrapper.multiple > .MultiControls > p {
+  display: inline-block;
+  cursor: pointer;
+  padding: 12px;
+  width: 50%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.SumoSelect > .optWrapper.multiple > .MultiControls > p:hover {
+  background-color: #f1f1f1;
+}
+
+.SumoSelect > .optWrapper.multiple > .MultiControls > p.btnOk {
+  border-right: 1px solid #DBDBDB;
+  border-radius: 0px 0px 0px 3px;
+}
+
+.SumoSelect > .optWrapper.multiple > .MultiControls > p.btnCancel {
+  border-radius: 0px 0px 3px 0px;
+}
+
+
+.SumoSelect > .optWrapper.isFloating > .options > li {
+  padding: 12px 6px;
+}
+
+
+.SumoSelect > .optWrapper.multiple.isFloating > .options > li {
+  padding-left: 35px;
+}
+
+.SumoSelect > .optWrapper.multiple.isFloating {
+  padding-bottom: 43px;
+}
+
+.SumoSelect > .optWrapper.multiple > .options > li.selected span i {
+  background-image: url('https://cdn1.iconfinder.com/data/icons/Keyamoon-IcoMoon--limited/16/checkbox-checked.png');
+}
+
+
+.SumoSelect.disabled {
+  opacity: 0.7;
+}
+
+.SumoSelect.disabled > .CaptionCont > label {
+  background-color: #F1F1F1;
+}
+
+
+.SumoSelect > .optWrapper > .options > li.optGroup {
+  padding-left: 5px;
+  text-decoration: underline;
+}
+*/
+
+/*Background overlay*/
+body > .BackdropSelect {
+  display: none;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  z-index: 100;
+}
+
+.sc-placeholder {
+  height: 49px;
+}
+
+.sc-category-container {
+  .text-link {
+    text-decoration: none;
+    color: rgb(44, 46, 50);
+  }
+}
+
+.df-hidden-separator, .df-hidden-field {
+  display: none;
+}
+
+.dynamic-fields .df-placeholder {
+  height: 51px;
+}
+
+.df-separator p:not(.u-item_restore) {
+  display: inline-block;
+  padding: 7px 18px;
+  margin: -5px 0 -5px 5px;
+  height: 36px;
+  width: 312px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #e0e2e6;
+  color: #a4a6aa;
+}
+
+.cm-table a {
+  text-decoration: none;
+  color: #2c2e32;
+}
+
+.cra-container {
+  display: block;
+  position: relative;
+  z-index: 99999;
+
+  .cra-input {
+    display: inline-block;
+    font-weight: normal;
+    height: 35px;
+    width: 350px;
+    box-sizing: border-box;
+    padding: 7px 18px 8px;
+    font-size: 1em;
+    line-height: 1;
+    margin: 0;
+    font-family: 'PT Sans', sans-serif;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: clip;
+    outline: 0;
+    color: white;
+    border: 2px solid #54565a;
+    background: rgba(44, 46, 50, .97) url(http://new-admin.ucoz.com/img/icons/icon_sel.svg) no-repeat right 18px top 15px;
+    border-radius: 9px;
+  }
+  .cra-opened:focus {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none;
+  }
+
+  .cra-input:focus {
+    color: #2c2e32;
+    background: #fafafc url(http://new-admin.ucoz.com/img/icons/icon_sel.svg) no-repeat right 18px top 15px;
+    border: 2px solid #e0e2e6;
+  }
+
+  .ui-autocomplete {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 9999999999999 !important;
+    display: none;
+    max-height: 230px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #e0e2e6;
+    background-clip: padding-box;
+    background-color: #fafafc;
+    *border-right-width: 2px;
+    *border-bottom-width: 2px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: none 0;
+    box-sizing: border-box;
+    list-style: none outside none;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+  }
+
+  .ui-menu-item {
+    width: 100%;
+  }
+
+  .ui-menu-item > a.ui-corner-all {
+    clear: both;
+    font-weight: normal;
+    line-height: 18px;
+    white-space: nowrap;
+    text-decoration: none;
+    background: #fafafc;
+    border-bottom: 1px solid #e0e2e6;
+    cursor: pointer;
+    display: block;
+    margin: 0;
+    overflow: hidden;
+    padding: 8px 10px;
+    width: 100%;
+  }
+
+  .ui-state-hover, .ui-state-active {
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    background-image: none;
+  }
+
+  .ui-helper-hidden-accessible {
+    display: none;
+  }
+
+}
+
+// datapicker
+.ui-datepicker {
+  position: relative;
+  display: none;
+  background-color: #2C2E32;
+  padding: 25px 45px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: 380px;
+  z-index: 9999999999999 !important;
+  margin-top: 10px;
+}
+
+.ui-datepicker:before {
+  position: absolute;
+  content: '';
+  padding: 0;
+  top: -20px;
+  left: 50%;
+  margin-left: -10px;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #2C2E32;
+}
+
+.ui-datepicker-next {
+  color: white;
+  float: right;
+  padding: 7px 12px;
+  border-left: solid 2px #54565A;
+  cursor: pointer;
+  user-select: none;
+}
+
+.ui-datepicker-prev {
+  color: white;
+  float: left;
+  padding: 7px 12px;
+  border-right: solid 2px #54565A;
+  cursor: pointer;
+  user-select: none;
+}
+
+.ui-datepicker-title {
+  color: #A4A6AA;
+  width: 115px;
+  padding: 7px 0;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+.ui-datepicker-month {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.ui-datepicker-header {
+  display: block;
+  margin: 15px auto;
+  width: 225px;
+  border: solid 2px #54565A;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.ui-datepicker-calendar {
+  margin: auto;
+  thead span {
+    padding: 0 10px;
+    color: #686A6E;
+  }
+  thead tr {
+    height: 25px;
+    user-select: none;
+  }
+  tbody a {
+    padding: 0 10px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+  }
+  tbody tr {
+    height: 25px;
+  }
+  .ui-datepicker-week-end span, .ui-datepicker-week-end a {
+    color: #38C579;
+  }
+}
+
+.u-form input[type="text"].u-form-error:focus {
+  border: 2px solid @error;
+}
+
+.u-form-error-description {
+  color: @error;
+}
+.fu-add-link-container input.fu-url-input[type=text] {
+  width: 258px;
+}
+.u-form-error-description {
+display: inline-block;
+}
+.fu-wrong-element {
+  display: inline-block;
+  &>*{
+    vertical-align: top;
+  }
+  span {
+    background: url('../img/fileupload-delete.png') no-repeat center;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  div {
+    width: 120px;
+    height: 80px;
+    border-radius: 10px;
+    border: solid 2px @error;
+    display: inline-block;
+  }
+  p {
+    color: @error;
+  }
+}

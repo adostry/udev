@@ -1,0 +1,84 @@
+table.u-table {
+	width: calc(100% + 1px);
+	margin: 20px 0;
+	}
+
+table.u-table th {
+	color: @base_font;
+	padding: 7px 0 0 0;
+	text-align: left;
+    font-weight: 700;
+    margin-bottom: 10px;
+    vertical-align: middle;
+	}
+table.u-table th p {border-bottom: 1px solid @sub_item_active_bg; padding: 7px 10px 7px 0; margin-bottom: 6px;}
+
+table.u-table td {padding: 0; vertical-align: middle;}
+
+table.u-table th:first-child {border-bottom: none; padding-bottom: 0;}
+
+.dynamic-fields table.u-table {
+    th:first-child {padding-left: 0;}
+    th:nth-child(2) {width: 322px;}
+}
+
+table.u-table {
+    th:nth-child(1),
+    td:nth-child(1) {padding-left: 93px;}
+    td:nth-child(2) img {width: 63px; height: 36px; vertical-align: middle;}
+    td:nth-child(3) {width: auto;}
+    
+    th:nth-child(4),
+    td:nth-child(4) {padding-right: 93px;}
+    
+    thead tr:first-child:hover {background-color: transparent;}
+    
+    tr:hover,
+    tr.checked {background-color: @light_grey;}
+    
+    a.img-link {display: block;}
+    a.text-link {display: block; padding: 14px 0; text-decoration: none; color: @base_font;}
+     a.text-link:hover {color: @base_font;}
+}
+
+
+table.sc-table {
+    
+    th:nth-child(3),
+    td:nth-child(3){;padding-right: 0;}
+    
+    th:nth-child(4),
+    td:nth-child(4) {padding-right: 0;}
+    
+    th:nth-child(5), 
+    td:nth-child(5) {padding-right: 93px;}
+}
+
+.u-table_column-check {width: 53px;}
+.u-table_column-drag {width: 20px;}
+.u-table_column-screen {width: 87px;}
+.u-table_column-subcats {width: 170px;}
+.u-table_column-id {width: 55px;}
+
+/* SORTING */
+.sorting_up {
+    display: inline-block;
+    width: 10px;
+    height: 11px;
+    background: url(../img/icons/sort_up.png) no-repeat center center;
+    opacity: 0.2;
+    cursor: pointer;
+}
+.sorting_up:hover,
+.sorting_up.active {opacity: 1;}
+
+.sorting_down {
+    display: inline-block;
+    width: 10px;
+    height: 11px;
+    background: url(../img/icons/sort_down.png) no-repeat center center;
+    opacity: 0.2;
+    cursor: pointer;
+}
+.sorting_down:hover,
+.sorting_down.active {opacity: 1;}

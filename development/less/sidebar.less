@@ -1,0 +1,831 @@
+.u-side {
+	width: 18%;
+	padding:42px 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	.no-select(none);
+	min-width:210px;
+}
+.u-side.hide{
+	display:none;
+}
+.u-side-nav li {
+	list-style: none;
+	display: block;
+	margin-bottom: 7px;
+}
+.u-side-nav b,
+.u-side-nav a{
+	text-decoration: none;
+    cursor:pointer;
+	color: @side_grey;
+	display:block;
+	font-size:1em;
+	line-height: 24px;
+	height: 21px;
+	padding: 10px 10px 10px 59px;
+	margin: 1px 0;
+	.border-radiuses (0, 0, 5px, 5px);
+	position:relative;
+	.transition(color 0.2s linear, background 0.2s linear, box-shadow 0.2s linear;);
+}
+.u-side-nav .active a,
+.u-side-nav b:hover,
+.u-side-nav a:hover{
+	color: @side_act_font;
+	background: @side_act_bg;
+}
+.u-side-nav .active .icon{
+	color: @side_act_icon;
+}
+.u-side-nav .u-item-inner{
+	padding: 0 0 0 71px;
+	margin: 17px 0 16px 0;
+	position: relative;
+}
+.u-side-nav .u-item-inner:before{
+	content: "";
+	display: block;
+	position: absolute;
+	top: -8px;
+	left: 40px;
+	width: 1px;
+	height: 100%;
+	background: @side_tree;
+}
+.u-side-nav .u-item-inner li{
+	margin-bottom: 27px;
+	position: relative;
+}
+.u-side-nav .u-item-inner li:last-child{
+	margin-bottom: 0;
+}
+.u-side-nav .u-item-inner li:before{
+	content: "";
+	display: block;
+	position: absolute;
+	z-index: 11;
+	top: 12px;
+	left: -31px;
+	width: 20px;
+	height: 1px;
+	background: @side_tree;
+}
+.u-side-nav .u-item-inner li a,
+.u-side-nav .u-item-inner li.active a{
+	background: none;
+	padding: 0;
+	margin: 0;
+}
+.u-side-nav .u-item-inner li a{
+	color: @side_grey;
+}
+.u-side-nav .u-item-inner li.active a,
+.u-side-nav .u-item-inner li a:hover{
+	color: @side_act_tree_font;
+}
+.u-side-nav .u-item-inner li a:before{
+	content:"";
+	display: block;
+	position: absolute;
+	z-index: 23;
+	width: 5px;
+	height: 5px;
+	top: 10px;
+	left: -14px;
+	border-radius:50%;
+	background: @side_tree;
+}
+.u-side-nav b span,
+.u-side-nav a span{
+	position: relative;
+	z-index: 20;
+}
+.u-side-nav .icon,
+.u-side-subnav .icon{
+	display:block;
+	color: @dark_grey;
+	float: left;
+	font-family: 'ucoz';
+	margin: 2px 8px 0 0;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 24px;
+	-webkit-font-smoothing: antialiased;
+	.transition(color 0.2s linear);
+}
+.u-side-subnav li {
+	list-style: none;
+	display: block;
+}
+.u-side-subnav a{
+	text-decoration: none;
+    cursor:pointer;
+	color: @side_sub_font;
+	display:block;
+	font-size:1em;
+	line-height: 24px;
+	height: 21px;
+	padding: 0 10px 0 3px;
+	margin: 0;
+	position: relative;
+}
+.u-side-subnav .u-item a {padding: 3px 10px 3px 30px;}
+
+.u-side-subnav .active a,
+.u-side-subnav b:hover,
+.u-side-subnav a:hover{
+	color: @side_sub_act_font;
+	
+}
+
+.u-mod-manage .icon{
+	left: 31px;
+	top: 11px !important;
+	font-size: 0.9em;
+}
+.u-mod-blog .icon{
+	left: 30px;
+	top: 10px;
+	font-size: 1em;
+}
+.u-tool-backup .icon{
+	left: 1px;
+	font-size: 1.15em;
+}
+.u-mod-news .icon{
+	left: 30px;
+	top: 12px;
+	font-size: 1em;
+}
+.u-tool-fmanag .icon{
+	left: 1px;
+	font-size: 1.15em;
+}
+.u-mod-photo .icon{
+	left: 30px;
+	top: 11px;
+	font-size: 1em;
+}
+.u-mod-games .icon{
+	left: 30px;
+	top: 11px;
+	font-size: 1em;
+}
+.u-mod-gb .icon{
+	left: 30px;
+	top: 11px;
+	font-size: 1em;
+}
+.u-mod-back .icon{
+	font-size: 0.9em;
+}
+.u-mod-faq .icon{
+	left: 30px;
+	top: 10px;
+	font-size: 1em;
+}
+.u-tool-inform .icon{
+	left: 1px;
+	font-size: 1.13em;
+}
+.u-mod-search .icon{
+	left: 31px;
+	top: 11px;
+	font-size: 0.9em;
+}
+.u-mod-tests .icon{
+	left: 30px;
+	top: 11px;
+	font-size: 1em;
+}
+.u-mod-chat .icon{
+	left: 30px;
+	top: 11px;
+	font-size: 1em;
+}
+.u-tool-rss .icon{
+	left: 1px;
+	top: 11px;
+	font-size: 1.13em;
+}
+.u-mod-forum .icon{
+	left: 30px;
+	top: 12px;
+	font-size: 1em;
+}
+.u-mod-articles .icon{
+	left: 31px;
+	top: 13px;
+	font-size: 1em;
+}
+.u-mod-files .icon{
+	left: 30px;
+	top: 11px;
+	font-size: 1em;
+}
+.u-mod-dir .icon{
+	left: 30px;
+	top: 12px;
+	font-size: 1em;
+}
+.u-mod-board .icon{
+	left: 30px;
+	top: 12px;
+	font-size: 1em;
+}
+.u-mod-poll .icon{
+	left: 30px;
+	top: 11px;
+	font-size: 1em;
+}
+.u-mod-video .icon{
+	left: 31px;
+	top: 11px;
+	font-size: 1em;
+}
+.u-mod-crosspost .icon{
+	left: 31px;
+	top: 12px;
+	font-size: 0.9em;
+}
+.u-tool-sms .icon{
+	left: 1px;
+	top: 11px;
+	font-size: 1.13em;
+}
+.u-mod-email .icon{
+	left: 30px;
+	top: 10px;
+	font-size: 0.97em;
+}
+.u-tool-prize .icon{
+	left: 2px;
+	font-size: 1.01em;
+}
+.u-mod-user .icon{
+	left: 30px;
+	top: 11px;
+	font-size: 1em;
+}
+.u-mod-pages .icon{
+	left: 30px;
+	top: 12px;
+	font-size: 1em;
+}
+.u-tool-friend .icon{
+	left: 1px;
+	font-size: 1.15em;
+}
+.u-tool-banner .icon{
+	left: 1px;
+	font-size: 1.15em;
+}
+.u-tool-smiles .icon{
+	left: 1px;
+	top: 11px;
+	font-size: 1.15em;
+}
+
+/*========================= Side menu colors ========================*/
+
+/* color #1 */
+#u-mod-color-1 a:hover .icon,
+#u-mod-color-1.active .icon{
+	color: @icon_color1;
+}
+
+#u-mod-color-1 a:hover,
+#u-mod-color-1.active a{
+	box-shadow: inset -4px 0 0 @icon_color1;
+}
+#u-mod-color-1.active .u-item-inner a{
+	box-shadow: none;
+}
+#u-mod-color-1.active .u-item-inner .active a:before{
+	background: @icon_color1;
+}
+/* color #1 */
+
+/* color #2 */
+#u-mod-color-2 a:hover .icon,
+#u-mod-color-2.active .icon{
+	color:@icon_color2;
+}
+
+#u-mod-color-2 a:hover,
+#u-mod-color-2.active a{
+	box-shadow: inset -4px 0 0 @icon_color2;
+}
+#u-mod-color-2.active .u-item-inner a{
+	box-shadow: none;
+}
+#u-mod-color-2.active .u-item-inner .active a:before{
+	background:@icon_color2;
+}
+/* color #2 */
+
+/* color #3 */
+#u-mod-color-3 a:hover .icon,
+#u-mod-color-3.active .icon{
+	color: @icon_color3;
+}
+#u-mod-color-3 a:hover,
+#u-mod-color-3.active a{
+	box-shadow: inset -4px 0 0 @icon_color3;
+}
+#u-mod-color-3.active .u-item-inner a{
+	box-shadow: none;
+}
+#u-mod-color-3.active .u-item-inner .active a:before{
+	background: @icon_color3;
+}
+/* color #3 */
+
+/* color #4 */
+#u-mod-color-4 a:hover .icon,
+#u-mod-color-4.active .icon{
+	color: @icon_color4;
+}
+
+#u-mod-color-4 a:hover,
+#u-mod-color-4.active a{
+	box-shadow: inset -4px 0 0 @icon_color4;
+}
+/* color #4 */
+
+/* color #5 */
+#u-mod-color-5 a:hover .icon,
+#u-mod-color-5.active .icon{
+	color: @icon_color5;
+}
+
+#u-mod-color-5 a:hover,
+#u-mod-color-5.active a{
+	box-shadow: inset -4px 0 0 @icon_color5;
+}
+#u-mod-color-5.active .u-item-inner a{
+	box-shadow: none;
+}
+#u-mod-color-5.active .u-item-inner .active a:before{
+	background: @icon_color5;
+}
+/* color #5 */
+
+/* color #6 */
+#u-mod-color-6 a:hover .icon,
+#u-mod-color-6.active .icon{
+	color: @icon_color6;
+}
+
+#u-mod-color-6 a:hover,
+#u-mod-color-6.active a{
+	box-shadow: inset -4px 0 0 @icon_color6;
+}
+#u-mod-color-6.active .u-item-inner a{
+	box-shadow: none;
+}
+#u-mod-color-6.active .u-item-inner .active a:before{
+	background: @icon_color6;
+}
+/* color #6 */
+
+/* color #7 */
+#u-mod-color-7 a:hover .icon,
+#u-mod-color-7.active .icon{
+	color: @icon_color7;
+}
+
+#u-mod-color-7 a:hover,
+#u-mod-color-7.active a{
+	box-shadow: inset -4px 0 0 @icon_color7;
+}
+#u-mod-color-7.active .u-item-inner a{
+	box-shadow: none;
+}
+#u-mod-color-7.active .u-item-inner .active a:before{
+	background: @icon_color7;
+}
+/* color #7 */
+
+/* color #8 */
+#u-mod-color-8 a:hover .icon,
+#u-mod-color-8.active .icon{
+	color: @icon_color8;
+}
+
+#u-mod-color-8 a:hover,
+#u-mod-color-8.active a{
+	box-shadow: inset -4px 0 0 @icon_color8;
+}
+#u-mod-color-8.active .u-item-inner a{
+	box-shadow: none;
+}
+#u-mod-color-8.active .u-item-inner .active a:before{
+	background: @icon_color8;
+}
+/* color #8 */
+
+/* color #9 */
+#u-mod-color-9 a:hover .icon,
+#u-mod-color-9.active .icon{
+	color: @icon_color9;
+}
+
+#u-mod-color-9 a:hover,
+#u-mod-color-9.active a{
+	box-shadow: inset -4px 0 0 @icon_color9;
+}
+#u-mod-color-9.active .u-item-inner a{
+	box-shadow: none;
+}
+#u-mod-color-9.active .u-item-inner .active a:before{
+	background: @icon_color9;
+}
+/* color #9 */
+
+/* color #10 */
+#u-mod-color-10 a:hover .icon,
+#u-mod-color-10.active .icon{
+	color: @icon_color10;
+}
+
+#u-mod-color-10 a:hover,
+#u-mod-color-10.active a{
+	box-shadow: inset -4px 0 0 @icon_color10;
+}
+#u-mod-color-10.active .u-item-inner a{
+	box-shadow: none;
+}
+#u-mod-color-10.active .u-item-inner .active a:before{
+	background: @icon_color10;
+}
+/* color #10 */
+
+/* color #11 */
+#u-mod-color-11 a:hover .icon,
+#u-mod-color-11.active .icon{
+	color: @icon_color11;
+}
+
+#u-mod-color-11 a:hover,
+#u-mod-color-11.active a{
+	box-shadow: inset -4px 0 0 @icon_color11;
+}
+#u-mod-color-11.active .u-item-inner a{
+	box-shadow: none;
+}
+#u-mod-color-11.active .u-item-inner .active a:before{
+	background: @icon_color11;
+}
+/* color #11 */
+
+/* color #12 */
+#u-mod-color-12 a:hover .icon,
+#u-mod-color-12.active .icon{
+	color: @icon_color12;
+}
+
+#u-mod-color-12 a:hover,
+#u-mod-color-12.active a{
+	box-shadow: inset -4px 0 0 @icon_color12;
+}
+#u-mod-color-12.active .u-item-inner a{
+	box-shadow: none;
+}
+#u-mod-color-12.active .u-item-inner .active a:before{
+	background: @icon_color12;
+}
+/* color #12 */
+
+/* color #13 */
+#u-mod-color-13 a:hover .icon,
+#u-mod-color-13.active .icon{
+	color: @icon_color13;
+}
+
+#u-mod-color-13 a:hover,
+#u-mod-color-13.active a{
+	box-shadow: inset -4px 0 0 @icon_color13;
+}
+#u-mod-color-13.active .u-item-inner a{
+	box-shadow: none;
+}
+#u-mod-color-13.active .u-item-inner .active a:before{
+	background: @icon_color13;
+}
+/* color #13 */
+
+/* color #14 */
+#u-mod-color-14 a:hover .icon,
+#u-mod-color-14.active .icon{
+	color: @icon_color14;
+}
+
+#u-mod-color-14 a:hover,
+#u-mod-color-14.active a{
+	box-shadow: inset -4px 0 0 @icon_color14;
+}
+#u-mod-color-14.active .u-item-inner a{
+	box-shadow: none;
+}
+#u-mod-color-14.active .u-item-inner .active a:before{
+	background: @icon_color14;
+}
+/* color #14 */
+
+/* color #15 */
+#u-mod-color-15 a:hover .icon,
+#u-mod-color-15.active .icon{
+	color: @icon_color15;
+}
+
+#u-mod-color-15 a:hover,
+#u-mod-color-15.active a{
+	box-shadow: inset -4px 0 0 @icon_color15;
+}
+#u-mod-color-15.active .u-item-inner a{
+	box-shadow: none;
+}
+#u-mod-color-15.active .u-item-inner .active a:before{
+	background: @icon_color15;
+}
+/* color #15 */
+
+/* color #16 */
+#u-mod-color-16 a:hover .icon,
+#u-mod-color-16.active .icon{
+	color: @icon_color16;
+}
+
+#u-mod-color-16 a:hover,
+#u-mod-color-16.active a{
+	box-shadow: inset -4px 0 0 @icon_color16;
+}
+#u-mod-color-16.active .u-item-inner a{
+	box-shadow: none;
+}
+#u-mod-color-16.active .u-item-inner .active a:before{
+	background: @icon_color16;
+}
+/* color #16 */
+
+.u-side-nav li.active .u-item-inner a,
+.u-side-nav li.active .u-item-inner a:hover{
+	box-shadow: none !important;
+}
+.u-side-nav li.active .u-item-inner .active a:before{
+	background: @icon_color4;
+}
+
+/*========================= Side menu colors ========================*/
+.u-item-title{
+	font-weight: 700;
+	font-size: 1em;
+	line-height: 24px;
+	color:#000;
+	text-transform: uppercase;
+	padding: 27px 0 5px 26px;
+	
+}
+
+.u-mod-add{
+	padding: 0;
+	position: relative;
+	margin: 27px 30px 0 30px;
+	width: 170px;
+}
+.u-mod-add a{
+	color: @side_grey;
+	font-size: 1em;
+	text-align: center;
+	line-height: 25px;
+	height: 25px;
+	display: block;
+	width: 148px;
+	margin: 1px;
+	border: none;
+	padding: 8px 10px;
+	border-radius: 5px;
+	background: @body_bg;
+}
+.u-mod-add a:hover{
+	color: @side_act_font;
+	background: @body_bg;
+}
+.u-add-wrap{
+	border:2px solid transparent;
+	border-radius: 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99;
+}
+.u-add-border{
+	display: block;
+	width: 170px;
+	height: 43px;
+	position: absolute;
+	z-index: 5;
+	background: @body_bg;
+	top: -1px;
+	left: 0;
+	overflow: hidden;
+}
+.u-add-line.top{
+	display:block;
+	height:3px;
+	width: 182px;
+	position: absolute;
+	z-index:12;
+	top:0;
+	left:-7px;
+}
+.u-add-line.top i{
+	display:block;
+	width:3px;
+	height:3px;
+	background: @add_btn_corn;
+	float:left;
+	margin-right:3px;
+}
+.u-add-line.right{
+	display:block;
+	height:70px;
+	width:3px;
+	position: absolute;
+	z-index:12;
+	top:-1px;
+	right:0;
+}
+.u-add-line.right i{
+	display:block;
+	width:3px;
+	height:3px;
+	background: @add_btn_corn;
+	margin-bottom:3px;
+}
+.u-add-line.bottom{
+	display:block;
+	height:3px;
+	width: 182px;
+	position: absolute;
+	z-index:12;
+	bottom:0;
+	right:-5px;
+}
+.u-add-line.bottom i{
+	display:block;
+	width:3px;
+	height:3px;
+	background: @add_btn_corn;
+	float:left;
+	margin-right:3px;
+}
+.u-add-line.left{
+	display:block;
+	height:70px;
+	width:3px;
+	position: absolute;
+	z-index:12;
+	bottom:-5px;
+	left:0;
+}
+.u-add-line.left i{
+	display:block;
+	width:3px;
+	height:3px;
+	background: @add_btn_corn;
+	margin-bottom:3px;
+}
+.u-add-line.corner{
+	display: block;
+	width: 170px;
+	height: 43px;
+	background: transparent;
+	position: absolute;
+	z-index: 25;
+	border-radius: 5px;
+	top: 0;
+	left: 0;
+	box-shadow: 10px 0 0 @body_bg, -10px 0 0 @body_bg, 0 -10px 0 @body_bg, 0 10px 0 @body_bg;
+}
+.u-mod-add:hover .u-add-line.top {
+	.animation(addtopline, 0.4s, infinite, linear);
+}
+.u-mod-add:hover .u-add-line.right{
+	.animation(addrightline, 0.4s, infinite, linear);
+}
+.u-mod-add:hover .u-add-line.bottom{
+	.animation(addbottomline, 0.4s, infinite, linear);
+}
+.u-mod-add:hover .u-add-line.left{
+	.animation(addleftline, 0.4s, infinite, linear);
+}
+@keyframes addtopline {
+	from {left:-7px;}
+	to {left:-1px;}
+}
+@-webkit-keyframes addtopline {
+	from {left:-7px;}
+	to {left:-1px;}
+}
+@-moz-keyframes addtopline {
+	from {left:-7px;}
+	to {left:-1px;}
+}
+@-o-keyframes addtopline {
+	from {left:-7px;}
+	to {left:-1px;}
+}
+@keyframes addrightline {
+	from {top:-1px;}
+	to {top:5px;}
+}
+@-webkit-keyframes addrightline {
+	from {top:-1px;}
+	to {top:5px;}
+}
+@-moz-keyframes addrightline {
+	from {top:-1px;}
+	to {top:5px;}
+}
+@-o-keyframes addrightline {
+	from {top:-1px;}
+	to {top:5px;}
+}
+@keyframes addbottomline {
+	from {right:-5px;}
+	to {right:1px;}
+}
+@-webkit-keyframes addbottomline {
+	from {right:-5px;}
+	to {right:1px;}
+}
+@-moz-keyframes addbottomline {
+	from {right:-5px;}
+	to {right:1px;}
+}
+@-o-keyframes addbottomline {
+	from {right:-5px;}
+	to {right:1px;}
+}
+@keyframes addleftline {
+	from {bottom:-5px;}
+	to {bottom:1px;}
+}
+@-webkit-keyframes addleftline {
+	from {bottom:-5px;}
+	to {bottom:1px;}
+}
+@-moz-keyframes addleftline {
+	from {bottom:-5px;}
+	to {bottom:1px;}
+}
+@-o-keyframes addleftline {
+	from {bottom:-5px;}
+	to {bottom:1px;}
+}
+
+/* SUB MENU */
+.u-sub-title {
+	font-weight: 400;
+	font-size: 1em;
+	line-height: 20px;
+	color:@base_font;;
+	padding: 7px 0 11px 0;
+	margin: 0 0 0 30px;
+	
+	}
+	
+.u-sub-title.settings span.icon:before {
+	content: "i";
+	color: @dark_grey;
+	font-size: 14pt;
+	margin-right: 6px;
+	}	
+
+.u-sub-title.manage span.icon:before {
+	content: "e";
+	color: @dark_grey;
+	font-size: 13pt;
+	margin-right: 6px;
+	}
+
+
+.u-sub-item {padding: 7px 0 8px 23px;}
+.u-sub-item_padded {padding: 19px 0 8px 23px;}
+.u-sub-item a {color: @base_font;}
+
+.u-sub-item.active {background: @sub_item_active_bg; border-radius: 8px 0 0 8px;}
+.u-sub-item.active a {color: @sub_item_active_font;}
+
+.del-link a {color: @error;}
+.del-link a:hover {color: red;}
+
+
